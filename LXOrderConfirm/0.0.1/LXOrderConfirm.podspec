@@ -12,16 +12,13 @@ s.homepage     = "https://github.com/ModulizationDemo1/LXOrderConfirm.git"
 s.license      = "MIT"                #开源协议
 s.author             = { "linyi31" => "linyi@jd.com" }
 
-s.source       = { :git => "https://github.com/ModulizationDemo1/LXOrderConfirm.git" }
-## 这里不支持ssh的地址，只支持HTTP和HTTPS，最好使用HTTPS
-## 正常情况下我们会使用稳定的tag版本来访问，如果是在开发测试的时候，不需要发布release版本，直接指向git地址使用
-## 待测试通过完成后我们再发布指定release版本，使用如下方式
 #s.source       = { :git => "https://github.com/ModulizationDemo1/LXOrderConfirm.git", :tag => version }
+s.source       = { :git => "https://github.com/ModulizationDemo1/LXOrderConfirm.git", :tag => s.version.to_s }
 
 s.platform     = :ios, "8.0"          #支持的平台及版本
 s.requires_arc = true                 #是否使用ARC
 
-s.source_files  = "LXOrderConfirm/**/*.{h,m}"    #OC可以使用类似这样"Classes/**/*.{h,m}"
+s.source_files  = "LXOrderConfirm/Classes/*.{h,m}"    #OC可以使用类似这样"Classes/**/*.{h,m}"
 
 # s.dependency "JSONKit", "~> 1.4"    #依赖关系，该项目所依赖的其他库，如果有多个可以写多个 s.dependency
 
